@@ -1,0 +1,82 @@
+/**
+ * Override: The Attention Firewall
+ * Stylesheet - Distraction Element Hiding
+ * Author: Sumanth Katta
+ * Description: Surgical CSS rules to hide Instagram Reels and YouTube Shorts
+ */
+
+/* All rules are scoped to body.override-active for toggle control */
+
+/* ========================================
+   INSTAGRAM: REELS REMOVAL
+   ======================================== */
+
+/* Hide Reels icon in left sidebar */
+body.override-active a[href*='/reels/'],
+body.override-active a[href='/reels/'],
+body.override-active svg[aria-label='Reels'] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Hide Reels tab on user profiles */
+body.override-active a[href*='/reels/'][role='tab'],
+body.override-active div[role='tablist'] a[href*='/reels/'] {
+  display: none !important;
+}
+
+/* Hide any element containing 'reels' in the href */
+body.override-active [href*='instagram.com/reels'],
+body.override-active [href*='/reels/'] {
+  display: none !important;
+}
+
+/* ========================================
+   YOUTUBE: SHORTS REMOVAL
+   ======================================== */
+
+/* Hide Shorts button in main sidebar */
+body.override-active ytd-guide-entry-renderer a[title='Shorts'],
+body.override-active ytd-guide-entry-renderer a[title='Shorts'] *,
+body.override-active ytd-mini-guide-entry-renderer a[title='Shorts'],
+body.override-active ytd-mini-guide-entry-renderer[aria-label='Shorts'] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide entire Shorts guide entry */
+body.override-active ytd-guide-entry-renderer:has(a[title='Shorts']),
+body.override-active ytd-mini-guide-entry-renderer:has(a[title='Shorts']) {
+  display: none !important;
+}
+
+/* Hide Shorts shelf on homepage */
+body.override-active ytd-rich-shelf-renderer[is-shorts],
+body.override-active ytd-reel-shelf-renderer {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Hide Shorts tab on channel pages */
+body.override-active yt-tab-shape[tab-title='Shorts'],
+body.override-active .yt-tab-shape-wiz[tab-title='Shorts'],
+body.override-active tp-yt-paper-tab:has(.yt-tab-title[title='Shorts']) {
+  display: none !important;
+}
+
+/* Hide Shorts in search results */
+body.override-active ytd-video-renderer[is-shorts],
+body.override-active ytd-grid-video-renderer[is-shorts] {
+  display: none !important;
+}
+
+/* Additional YouTube Shorts patterns */
+body.override-active [is-shorts],
+body.override-active [href*='/shorts/'],
+body.override-active a[href*='youtube.com/shorts'] {
+  display: none !important;
+}
