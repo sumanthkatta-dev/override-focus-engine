@@ -71,8 +71,3 @@ override/
 
 *Developed by Sumanth Katta | Jan 2026*
 
-
-
-```
-
-**Result:** Your project now visually proves its value with a direct visual comparison! 🟢
